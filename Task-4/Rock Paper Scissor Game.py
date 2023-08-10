@@ -6,6 +6,13 @@ root.title("RPS Game")
 root.geometry('550x400')
 global scorep,scorec,cpc
 scorep,scorec=0,0
+
+def resets():
+    global scorec,scorep
+    scorec,scorep=0,0
+    canva.itemconfig(person_score, text=scorep)
+    canva.itemconfig(computer_score, text=scorec)
+
 def button(n):
     global scorec,scorep,cpc,result
     cpc=random.randrange(1,4)
@@ -46,7 +53,7 @@ def button(n):
         sc=canva.create_image(460,300,image=scissorc)
         root.after(600,lambda: canva.delete(sc))
 
-    a=canva.create_text(270,300,text=result,font=('Georgia',18,))
+    a=canva.create_text(270,300,text=result,font=('Georgia',18))
     root.after(600, lambda: canva.delete(a))
     root.after(600,lambda: canva.delete())
     canva.itemconfig(person_score, text=scorep)
@@ -72,17 +79,20 @@ scissorp=ImageTk.PhotoImage(scissorp)
 canva=Canvas(root,width=550,height=400)
 canva.pack(fill='both',expand=True)
 canva.create_image(0,0,image=bg,anchor='nw')
-canva.create_text(60,60,text="Your Score",font=('Times',15))
-canva.create_text(470,60,text="Computer Score",font=('Times',15))
+canva.create_text(60,60,text="Your Score",font=('Times',15,UNDERLINE))
+canva.create_text(470,60,text="Computer Score",font=('Times',15,UNDERLINE))
 canva.create_text(280,120,text="Choose One To Start The Game!",font=('Lexend ',20,'normal'),fill='Black')
-b1=Button(root,text='Rock 🪨',width=6,height=1,font=('Times',15),command=lambda:button(1))
+b1=Button(root,text='Rock 🪨',width=6,height=1,font=('Times',15),command=lambda:button(1),bg='#6c8fbd',activebackground='#506c91')
 b1_w=canva.create_window(80,200,anchor='sw',window=b1)
-b2=Button(root,text='Paper 📰',width=7,height=1,font=('Times',15),command=lambda:button(2))
+b2=Button(root,text='Paper 📰',width=7,height=1,font=('Times',15),command=lambda:button(2),bg='#6c8fbd',activebackground='#506c91')
 b2_w=canva.create_window(230,200,anchor='sw',window=b2)
-b3=Button(root,text='     Scissior ✂️',width=8,height=1,font=('Times',15),command=lambda:button(3))
+b3=Button(root,text='      Scissior ✂️',width=8,height=1,font=('Times',15),command=lambda:button(3),bg='#6c8fbd',activebackground='#506c91')
 b3_w=canva.create_window(380,200,anchor='sw',window=b3)
-person_score=canva.create_text(48,45,anchor='sw',text=scorep,font=('Lexend',20),fill='Red')
-computer_score=canva.create_text(465,45,anchor='sw',text=scorep,font=('Lexend',20),fill='Red')
+reset=Button(root,text="Try Again?",font=('Times',13),command=resets,bg='#6c8fbd',activebackground='#506c91')
+resetw=canva.create_window(230,380,window=reset,anchor='sw')
+person_score=canva.create_text(48,45,anchor='sw',text=scorep,font=('Lexend',20),fill='#8f2e51')
+computer_score=canva.create_text(465,45,anchor='sw',text=scorep,font=('Lexend',20),fill='#8f2e51')
+
 
 
 root.mainloop()
