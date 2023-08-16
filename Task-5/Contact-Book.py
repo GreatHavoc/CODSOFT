@@ -19,6 +19,27 @@ for i in range(len(cA)):
 mail_list=["outlook.com","gmail.com","ymail.com","mail.com"]
 
 
+#To find the name in the contact listbox
+def scankey(event):
+    val=event.widget.get()
+    if(len(val)==0):
+        lists=[]
+        lists=data
+    if len(val)>0:
+       lists=[]
+       for item in data:
+            fn,ln=item[1],item[2]
+            items=fn+" "+ln
+            if val.lower() in items.lower():
+                lists.append(item)
+    Update(lists)	 
+
+def Update(values):
+    lis.delete(0,'end')
+    for i in values:
+        lis.insert('end',i[1] +' '+i[2])
+    lis.bind('<Double-1>',show_details)
+
 def validate(n):
     global selected
     if(n==0):
@@ -26,12 +47,12 @@ def validate(n):
             if(block1.get()==''):
                 cur.execute("""INSERT INTO ContactDB('First_Name','Last_Name','Mobile_No','Mobile_id') VALUES (?,?,?,?)""",(fname.get(),lname.get(),mobile.get(),phoneid.get()))
                 con.commit()
-                messagebox.showinfo('Success','Contact Added Successfully')
+                messagebox.showinfo('Success','Contact Added Successfully\nPlease Restart To Take Effect')
                 cms.destroy()
             else:
                 cur.execute("""INSERT INTO ContactDB('First_Name','Last_Name','Mobile_No','Mobile_id','Email_Address','Email_Domain') VALUES (?,?,?,?,?,?)""",(fname.get(),lname.get(),mobile.get(),phoneid.get(),block1.get(),domain.get()))
                 con.commit()
-                messagebox.showinfo('Success','Contact Added Successfully')
+                messagebox.showinfo('Success','Contact Added Successfully\nPlease Restart To Take Effect')
                 cms.destroy()
         except(sqlite3.IntegrityError):
             messagebox.showerror('Integrity Error','Number Entered by You is Too Short or Too Long or Already Exist')
@@ -217,6 +238,7 @@ label=tb.Label(root,text='Search Box->',style='secondary.TLabel',font=('Georgia'
 
 search_box=tb.Entry(root,style='info.TEntry')
 search_box.place(x=280,y=118)
+search_box.bind('<KeyRelease>',scankey)
 
 sf=ScrolledFrame(root, autohide=True,bootstyle='dark rounded',height=420,width=410)
 sf.pack(pady=(175,4),expand=t.NO,padx=5)
@@ -225,11 +247,8 @@ lis=t.Listbox(sf,height=14,font=('Georgia',14),justify='center',highlightcolor='
 lis.pack(expand=t.NO,fill=t.BOTH)
 cur.execute('SELECT * FROM ContactDB')
 data=cur.fetchall()
-count=0
-for i in data:
-    lis.insert(count,i[1] +' '+i[2])
-    count+=1
-lis.bind('<Double-1>',show_details)
+
+Update(data)
 
 
 root.mainloop()

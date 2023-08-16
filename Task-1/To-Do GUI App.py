@@ -1,4 +1,5 @@
 import tkinter as t
+from tkinter import messagebox
 root=t.Tk()
 root.geometry('200x35')
 sroot = t.Label(root, text="Loading.... Please Wait!", font=40)
@@ -40,29 +41,29 @@ def tb1():
 def add():
     global task_list,count,display_area,task_entry
     if(task_entry.get()==''): 
-        t.messagebox.showerror("Error",message='Input is not valid!')
+        messagebox.showerror("Error",message='Input is not valid!')
     else:
         count+=1
         task_list.append(task_entry.get()+'\n')
         display_area.insert('end -1 chars', "[" + str(count) + "] " + task_entry.get()+'\n')
-        t.messagebox.showinfo('','Successfully Added!')
+        messagebox.showinfo('','Successfully Added!')
 
 def add1():
     global task_list,count,display_area,task_entry
     if(task_entry.get()==''): 
-        t.messagebox.showerror("Error",message='Input is not valid!')
+        messagebox.showerror("Error",message='Input is not valid!')
     else:
         count+=1
         task_list.append(task_entry.get()+'\n')
-        t.messagebox.showinfo('','Successfully Added!')
+        messagebox.showinfo('','Successfully Added!')
 
 def delete():
     global task_list,count
     if count==0:
-        t.messagebox.showerror('Error',message='Add Some Task First!')
+        messagebox.showerror('Error',message='Add Some Task First!')
         return
     if(int(task_entry.get())-1>count):
-        t.messagebox.showerror('Error',message='No Such Task No. Present!')
+        messagebox.showerror('Error',message='No Such Task No. Present!')
     else:
         count-=1
         del task_list[int(task_entry.get())-1]
