@@ -1,13 +1,13 @@
 # Calculator Project
 
-This is a simple calculator application built using Python and Tkinter, allowing users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
+This simple calculator application built using Python and Tkinter allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
 
 ## Features
 
-- Addition: Perform addition of two numbers.
+- Addition: Perform the addition of two numbers.
 - Subtraction: Perform subtraction of two numbers.
 - Multiplication: Perform multiplication of two numbers.
-- Division: Perform division of two numbers.
+- Division: Perform the division of two numbers.
 
 ## Requirements
 
@@ -16,27 +16,23 @@ This is a simple calculator application built using Python and Tkinter, allowing
 
 ## How to Use
 
-1. Clone the repository:
+1. Navigate to the project directory:
 
 
-git clone https://github.com/GreatHavoc/calculator-project.git
+    cd Task-2
 
 
-2. Navigate to the project directory:
+2. Run the calculator application:
 
 
-cd calculator-project
+    python GUI Calculator.py
 
 
-3. Run the calculator application:
+3. The calculator GUI will open up. You can enter the numbers you want to perform operations and then click the corresponding operation button.
 
+4. For Windows
 
-python Task-2 GUI Calculator.py
-
-
-4. The calculator GUI will open up. Enter the numbers you want to perform operations on and click the corresponding operation button.
-
-
+     A direct run folder is provided, which contains a .exe file which can directly run on Windows without the need to install Python or anything.
 ## Future Enhancements
 
 - Support for more advanced operations.
@@ -44,7 +40,7 @@ python Task-2 GUI Calculator.py
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute to this project, please fork the repository and create a pull request.
+Contributions are welcome! Please fork the repository and create a pull request to contribute to this project.
 
 ## License
 
