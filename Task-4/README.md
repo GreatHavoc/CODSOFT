@@ -36,8 +36,8 @@ Welcome to the Rock Paper Scissors game project! This interactive game allows yo
 
 2. Run the Rock Paper Scissors game script:
 
-	1.pip install PIL
-	2.python Rock_Paper_Scissor.py
+	1. pip install PIL
+	2. python Rock_Paper_Scissor.py
 
 
 3. The game GUI will open up.
