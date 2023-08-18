@@ -43,7 +43,7 @@ Welcome to the Rock Paper Scissors game project! This interactive game allows yo
 4. Click the corresponding button to Choose your move (Rock, Paper, or Scissors).
 5. The computer's move will be randomly generated.
 6. The game result will be displayed, and scores will be updated accordingly.
-7. Click the "Reset" button to reset the scores to zero.
+7. Click the "Try Again?" button to reset the scores to zero.
 
 
 ## Future Enhancements
