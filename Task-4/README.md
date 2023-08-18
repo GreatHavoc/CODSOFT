@@ -18,7 +18,7 @@ Welcome to the Rock Paper Scissors game project! This interactive game allows yo
 
 ### Option 1: Using the Executable (Windows)
 
-1. Download the "Rock_Paper_Scissor.exe" file from the "exe" folder.
+1. Download the "Rock_Paper_Scissor.exe" file from the "Direct Run" folder.
 2. Double-click the executable file to run the Rock Paper Scissors game.
 3. Click the corresponding button to Choose your move (Rock, Paper, or Scissors).
 4. The computer's move will be randomly generated.
