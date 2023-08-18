@@ -7,7 +7,7 @@ Welcome to the Rock Paper Scissors game project! This interactive game allows yo
 - Play the classic Rock Paper Scissors game against the computer.
 - Choose between Rock, Paper, and Scissors.
 - Keep track of your score against the computer.
-- Reset button to reset the scores back to zero.
+- Try Again? button to reset the scores back to zero.
 
 ## Requirements
 
@@ -23,7 +23,7 @@ Welcome to the Rock Paper Scissors game project! This interactive game allows yo
 3. Click the corresponding button to Choose your move (Rock, Paper, or Scissors).
 4. The computer's move will be randomly generated.
 5. The game result will be displayed, and scores will be updated accordingly.
-6. Click the "Reset" button to reset the scores to zero.
+6. Click the "Try Again?" button to reset the scores to zero.
 
 ### Option 2: Running the Script (Python)
 
