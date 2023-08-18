@@ -8,6 +8,7 @@ import sqlite3
 #connection to database
 con=sqlite3.connect('contact_database.db')
 cur=con.cursor()
+
 #loading country codes from excel file
 wb=load_workbook('country.xlsx')
 ws=wb['Sheet1']
@@ -17,7 +18,6 @@ countrylist=[]
 for i in range(len(cA)):
     countrylist.append((cA[i].value,cB[i].value))
 mail_list=["outlook.com","gmail.com","ymail.com","mail.com"]
-
 
 #To find the name in the contact listbox
 def scankey(event):
