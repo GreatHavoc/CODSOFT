@@ -5,19 +5,19 @@ This simple random password generator application is built to generate passwords
 ## Features
 
 - Generate random passwords of the specified length.
-- Password length can be customized between 6 and 13 characters.
+- Password length can be customised between 6 and 13 characters.
 - Easy-to-use GUI interface for generating passwords.
 
 ## Requirements
 
 - Windows operating system (for using the provided executable).
-- If you want to run the script directly, you will need Python (3.6 or higher) and the `Tkinter` library.
+- You will need Python (3.6 or higher) and the `Tkinter` library to run the script directly.
 
 ## How to Use
 
 ### Option 1: Using the Executable (Windows)
 
-1. Download the "PasswordGenerator.exe" file from the "exe" folder.
+1. Download the "Random Pass.exe" file from the "Direct Run" folder.
 2. Double-click the executable file to run the password generator.
 3. Enter the desired password length within the 6 to 13 characters range.
 4. Click the "Generate Password" button to generate a random password.
@@ -28,13 +28,13 @@ This simple random password generator application is built to generate passwords
 1. Navigate to the project directory:
 
 
-cd password-generator
+    cd Task-2
 
 
 2. Run the password generator script:
 
 
-python password_generator.py
+    python Random Pass.py
 
 
 3. The password generator GUI will open up.
@@ -50,7 +50,7 @@ python password_generator.py
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute to this project, please fork the repository and create a pull request.
+Contributions are welcome! Please fork the repository and create a pull request to contribute to this project.
 
 ## License
 
