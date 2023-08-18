@@ -13,6 +13,7 @@ Welcome to the Rock Paper Scissors game project! This interactive game allows yo
 
 - Windows operating system (for using the provided executable).
 - If you want to run the script directly, you need Python (3.6 or higher).
+- Install PIL library
 
 ## How to Play
 
@@ -35,8 +36,8 @@ Welcome to the Rock Paper Scissors game project! This interactive game allows yo
 
 2. Run the Rock Paper Scissors game script:
 
-
-	python Rock_Paper_Scissor.py
+	1.pip install PIL
+	2.python Rock_Paper_Scissor.py
 
 
 3. The game GUI will open up.
